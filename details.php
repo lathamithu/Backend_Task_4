@@ -116,7 +116,7 @@
 <label><h3>Profile :</h3></label></div>
 <br>
 <div class="inner-wrap">
-	<img src="<?php echo $file_path; ?>">
+	<?php echo $_SESSION["pic"]; ?>
 	<br>
 </div>
 
