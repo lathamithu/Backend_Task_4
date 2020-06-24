@@ -111,6 +111,17 @@
 <div class="inner-wrap">
 	<?php echo $_POST["address"]; ?><br>
 </div>
+
+<div class="section"><span>7</span>
+<label><h3>Profile :</h3></label></div>
+<br>
+<div class="inner-wrap">
+	<img src="<?php echo $file_path; ?>">
+	<br>
+</div>
+
+<br>
+</div>
 </div>
 </body>
 </html>
