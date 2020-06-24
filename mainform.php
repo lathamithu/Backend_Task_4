@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 <!DOCTYPE HTML>
 <html>  
 <head>
@@ -197,13 +199,12 @@
 <br>
 <br>
 <div class="inner-wrap">
-<input type="file" id="img" name="img"  onchange="loadFile(event)" accept="image/*">
+<input type="file" name="file" onchange="loadFile(event)"  accept="image/*">
 <br>
 <br>
 <img id="output" name="output" width="200" />
 </div>
 <br>
-
 
 <button id="btn">Submit</button>
 
@@ -218,9 +219,11 @@
 	var loadFile = function(event) {
 		var image = document.getElementById('output');
 		image.src = URL.createObjectURL(event.target.files[0]);
-		image.name='pic';
-		localStorage.setItem("i",URL.createObjectURL(event.target.files[0]));
-		
+		image.name = "pic";	
+		<?php
+		$_SESSION["pic"]=$_POST['pic'];
+		?>
+
 	};
 
 	
