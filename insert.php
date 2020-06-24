@@ -1,4 +1,7 @@
 <?php
+session_start();
+?>
+<?php
 	
 try{
 $dsn = "mysql:host=localhost;dbname=employee";
