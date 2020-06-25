@@ -116,12 +116,10 @@
 <label><h3>Profile :</h3></label></div>
 <br>
 <div class="inner-wrap">
-	<?php echo $_SESSION["pic"]; ?>
+	<img src="<?php echo $_SESSION['picture']; ?>" alt="picture"/>
 	<br>
 </div>
-
 <br>
-</div>
 </div>
 </body>
 </html>
