@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE HTML>
 <html>  
 <head>
@@ -126,7 +123,7 @@ session_start();
 
 <div class="form-style">
 <h2>Employee Form</h2>
-<form id="form1" action="insert.php" target="_blank" method="post" enctype="multipart/form-data" >
+<form id="form1" action="insert.php" target="_blank" method="post" enctype="multipart/form-data" onSubmit="window.location.reload();">
 
 <div class="section"><span>1</span>
 <label><h3>First name :</h3></label></div>
@@ -195,7 +192,7 @@ session_start();
 
 
 <div class="section"><span>7</span>
-<label><h3>Add profile picture :</h3></label></div>
+<label for="file"><h3>Add profile picture :</h3></label></div>
 <br>
 <br>
 <div class="inner-wrap">
@@ -206,7 +203,7 @@ session_start();
 </div>
 <br>
 
-<button id="btn">Submit</button>
+<button id="btn" >Submit</button>
 
 </form>
 
@@ -218,12 +215,7 @@ session_start();
 	 
 	var loadFile = function(event) {
 		var image = document.getElementById('output');
-		image.src = URL.createObjectURL(event.target.files[0]);
-		image.name = "pic";	
-		<?php
-		$_SESSION["pic"]=$_POST['pic'];
-		?>
-
+		image.src = URL.createObjectURL(event.target.files[0]);	
 	};
 
 	
