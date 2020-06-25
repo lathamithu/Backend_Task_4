@@ -1,8 +1,5 @@
 <?php
-session_start();
-?>
-<?php
-	
+session_start();	
 try{
 $dsn = "mysql:host=localhost;dbname=employee";
 $pdo = new PDO($dsn,"root","");
@@ -33,7 +30,13 @@ $pdoExec = $stmt->execute(array(":fname"=>$Firstname,":lname"=>$Lastname,":date_
 
 if($pdoExec)
 {
+
+    $filename    = $_FILES["file"]["tmp_name"];
+    $destination = $_FILES["file"]["name"]; 
+    move_uploaded_file($filename, $destination);
+    $_SESSION['picture'] = $destination;
 	require 'details.php';
+
 }
 else
 {
