@@ -43,7 +43,4 @@ else
 	echo "Not inserted";
 }
 }
-
-
-
 ?>
